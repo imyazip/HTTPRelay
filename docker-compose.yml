@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  vt-proxy:
+    build: .
+    container_name: vt-proxy
+    ports:
+      - "3000:3000"
+    environment:
+      RELAY_ACCESS_KEY: "your_api_key"
+    restart: unless-stopped
